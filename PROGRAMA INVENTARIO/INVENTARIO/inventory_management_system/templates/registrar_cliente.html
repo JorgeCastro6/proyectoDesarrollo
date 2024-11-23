@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Registrar Cliente</h2>
+    <form action="{{ url_for('registrar_cliente') }}" method="POST">
+        <label for="nombre_cliente">Nombre del Cliente:</label>
+        <input type="text" id="nombre_cliente" name="nombre_cliente" required>
+
+        <label for="documento_cliente">Documento del Cliente:</label>
+        <input type="text" id="documento_cliente" name="documento_cliente" required>
+
+        <button type="submit">Registrar Cliente</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Seguimiento de Cliente: {{ cliente['nombre'] }}</h2>
+<p>Documento: {{ cliente['documento'] }}</p>
+
+<h3>Compras Realizadas:</h3>
+<ul>
+    {% for compra in compras %}
+        <li>
+            <strong>{{ compra['nombre'] }}</strong> - ${{ compra['precio'] }} - Cantidad: {{ compra['cantidad'] }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
